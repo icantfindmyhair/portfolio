@@ -1,0 +1,87 @@
+.window {
+    position: absolute;
+    width: 600px;
+    height: 380px;
+    top: 120px;
+    left: 250px;
+    background: #eeeeee;
+    border: 2px solid #2172bd;
+    border-radius: 5px;
+    box-shadow: 5px 5px 12px rgba(180, 216, 245, 0.5);
+    z-index: 50;
+}
+
+.titlebar {
+    height: 30px;
+    background: #5089c7;
+    color: #eeeeee;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-weight: bold;
+}
+
+.controls {
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    display: flex;
+    gap: 3px;
+}
+
+.controls button {
+    height: 22px;
+    width: 26px;
+    border-radius: 4px;
+    border: 1px solid #1b3f73;
+    background: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls button.close-btn {
+    background: #ffadad;
+    border: 1px solid #7a0000;
+    color: white;
+}
+
+.controls button.close-btn:hover {
+    background: #ff4c4c;
+}
+
+.controls button:not(.close-btn):hover {
+    background: #d6e4f7;
+}
+
+.close-btn img, .maximize-btn img {
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+}
+
+.content {
+    padding: 15px;
+    height: calc(100% - 30px);
+    overflow: auto;
+}
+
+.titlebar {
+    cursor: move;
+    user-select: none;
+}
+
+.resize-handle {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+    background: transparent;
+}

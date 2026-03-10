@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Desktop Portfolio</title>
+    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="window.css">
+  </head>
+
+  <body>
+    <video autoplay muted loop id="video-bg">
+      <source src="media/whale.mp4" type="video/mp4">
+    </video>
+
+    <div class="desktop">
+
+      <div class="icon" ondblclick="openWindow('Projects')">
+        <img src="icons/flowers.png">
+        <span>Projects</span>
+      </div>
+
+      <div class="icon" ondblclick="openWindow('About')">
+        <img src="icons/person.png">
+        <span>About</span>
+      </div>
+
+      <div class="icon" ondblclick="openWindow('Contact')">
+        <img src="icons/phone.png">
+        <span>Contact</span>
+      </div>
+
+      <div class="icon" ondblclick="openWindow('Resume')">
+        <img src="icons/paper.png">
+        <span>Resume</span>
+      </div>
+    </div>
+
+    <!-- pop ups -->
+    <div id="window-layer"></div>
+    <script src="desktop.js"></script>
+    <script src="window.js"></script>
+
+    <!-- bottom screen things -->
+    <div id="taskbar-placeholder"></div>
+
+    <script src="clock.js"></script>
+
+    <!-- other html -->
+    <script>
+  fetch('taskbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('taskbar-placeholder').innerHTML = data;
+    });
+</script>
+
+  </body>
+</html>
