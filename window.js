@@ -1,3 +1,54 @@
+let windowCount = 0;
+let topZ = 100;
+
+let windowTemplate = null;
+
+async function loadWindowTemplate() {
+    if (!windowTemplate) {
+        const res = await fetch("window.html");
+        const html = await res.text();
+
+        const template = document.createElement("template");
+        template.innerHTML = html.trim();
+
+        windowTemplate = template.content.firstElementChild;
+    }
+}
+
+async function openWindow(title, startLeft = null, startTop = null, width = 600, height = 380) {
+
+    await loadWindowTemplate();
+
+    const layer = document.getElementById("window-layer");
+
+    const win = windowTemplate.cloneNode(true);
+
+    win.style.width = width + "px";
+    win.style.height = height + "px";
+
+    win.style.left = startLeft !== null
+        ? startLeft + "px"
+        : (200 + windowCount * 25) + "px";
+
+    win.style.top = startTop !== null
+        ? startTop + "px"
+        : (120 + windowCount * 25) + "px";
+
+    win.style.zIndex = ++topZ;
+
+    layer.appendChild(win);
+
+    win.querySelector(".window-title").textContent = title;
+
+    win.addEventListener("mousedown", () => {
+        win.style.zIndex = ++topZ;
+    });
+
+    windowCount++;
+
+    return win;
+}
+
 // maximize and close
 document.addEventListener("click", function(e){
 

@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15');
 
 body {
   margin: 0;
-  font-family: Bitcount Grid Single, sans-serif;
+  font-family: "Jersey 15", sans-serif;
   height: 100vh;
   overflow: hidden;
 }
@@ -59,7 +59,7 @@ body {
 }
 
 .icon span {
-  font-size: 20px;
+  font-size: 1.8rem;
   text-align: center;
 }
 

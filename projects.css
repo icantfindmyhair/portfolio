@@ -27,9 +27,9 @@
 }
 
 .project-tile span {
-  font-size: 14px;
-  color: #003c74;
-  font-weight: bold;
+  font-size: 1.3rem;
+  /* color: #003c74; */
+  color: black;
 }
 
 .project-tile:hover {

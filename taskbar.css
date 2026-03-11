@@ -18,7 +18,7 @@ box-sizing:border-box;
 .start-button{
   padding:5px 12px;
   border-radius:3px;
-  font-weight:bold;
+  font-size: 1.5rem;
   cursor:pointer;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@ box-sizing:border-box;
 
 .marquee span {
   margin-right: 50px;
-  font-weight: bold;
+  font-size: 1.5rem;
   color: #000;
 }
 
@@ -68,8 +68,7 @@ box-sizing:border-box;
 
 /* Clock text */
 .clock {
-  font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   line-height: 40px;
   display: inline-block;
   vertical-align: middle;
