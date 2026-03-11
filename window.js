@@ -32,7 +32,7 @@ async function openWindow(title, startLeft = null, startTop = null, width = 600,
 
     win.style.top = startTop !== null
         ? startTop + "px"
-        : (120 + windowCount * 25) + "px";
+        : (20 + windowCount * 25) + "px";
 
     win.style.zIndex = ++topZ;
 

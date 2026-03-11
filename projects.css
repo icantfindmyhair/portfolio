@@ -79,3 +79,12 @@
   top: 0;
   height: 100%;
 }
+
+.project-text h1{
+  font-size: 2rem;
+
+}
+
+.project-text p {
+  font-size: 1.5rem;
+}
