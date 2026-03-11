@@ -17,13 +17,12 @@ function openProjectsWindow() {
 }
 
 function openProjectWindow(projectName) {
-    // placeholder window for projects
-    openWindow(projectName, 500, 350);
-
-    fetch(`projects/${projectName}.html`)
-      .then(res => res.text())
-      .then(html => {
-        const lastWindow = document.querySelector(".window:last-child");
-        lastWindow.querySelector(".content").innerHTML = html;
-      });
+    openWindow(projectName, null, null, 600, 550).then(win => {
+      cleanedName = projectName.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+        fetch(`projects/${cleanedName}.html`)
+          .then(res => res.text())
+          .then(html => {
+            win.querySelector(".content").innerHTML = html;
+          });
+    });
 }

@@ -28,10 +28,54 @@
 
 .project-tile span {
   font-size: 1.3rem;
-  /* color: #003c74; */
   color: black;
 }
 
 .project-tile:hover {
   transform: scale(1.1);
+}
+
+/* =========================================== */
+
+.project-window {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.project-images-wrapper {
+  width: calc(50% - 5px);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.project-images-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-images-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.project-text {
+  width: calc(50% - 5px);
+  padding: 10px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  height: 100%;
 }
