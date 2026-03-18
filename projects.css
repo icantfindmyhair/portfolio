@@ -88,3 +88,49 @@
 .project-text p {
   font-size: 1.5rem;
 }
+
+a:link{
+  color: #2172bd;
+}
+
+a:visited{
+  color: #2172bd;
+}
+
+a:hover{
+  color: #1b3f73;
+}
+
+/* ==================================================================== */
+
+.project-video-wrapper {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.project-text-horizontal {
+  flex: 1 1 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.project-text-horizontal h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.project-text-horizontal p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}

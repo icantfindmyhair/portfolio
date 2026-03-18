@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Desktop Portfolio</title>
-    <link rel="stylesheet" href="desktop.css">
-    <link rel="stylesheet" href="window.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Desktop Portfolio</title>
+  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="window.css">
+  <link rel="stylesheet" href="startup.css">
+</head>
 
-  <body>
-    <video autoplay muted loop id="video-bg">
-      <source src="media/whale.mp4" type="video/mp4">
-    </video>
+<div id="startup-screen">
+  <div class="startup-text">
+    Starting up<span class="spinner">/</span>
+  </div>
+  <video autoplay muted loop id="startup-video">
+    <source src="media/fih.mp4" type="video/mp4">
+  </video>
+</div>
 
-    <div class="desktop">
+<body>
+  <video autoplay muted loop id="video-bg">
+    <source src="media/whale.mp4" type="video/mp4">
+  </video>
 
-      <div class="icon" ondblclick="openProjectsWindow()">
-        <img src="icons/flowers.png">
-        <span>Projects</span>
-      </div>
+  <div class="desktop">
 
-      <div class="icon" ondblclick="openAboutWindow()">
-        <img src="icons/person.png">
-        <span>About</span>
-      </div>
-
-      <div class="icon" ondblclick="openContactWindow()">
-        <img src="icons/phone.png">
-        <span>Contact</span>
-      </div>
-
-      <div class="icon" ondblclick="window.open('https://drive.google.com/drive/folders/1BHUkaOyi54l-XUb5xLbqfKSNrmxjEBht?usp=sharing', '_blank')">
-        <img src="icons/paper.png">
-        <span>Resume</span>
-      </div>
+    <div class="icon" ondblclick="openAboutWindow()">
+      <img src="icons/person.png">
+      <span>About</span>
     </div>
 
-    <!-- pop ups -->
-    <div id="window-layer"></div>
-    <!-- <script src="desktop.js"></script> -->
-    <script src="window.js"></script>
-    <script src="projects.js"></script>
-    <script src="contact.js"></script>
-    <script src="about.js"></script>
+    <div class="icon" ondblclick="openProjectsWindow()">
+      <img src="icons/flowers.png">
+      <span>Projects</span>
+    </div>
+    
+    <div class="icon"
+      ondblclick="window.open('https://drive.google.com/drive/folders/1BHUkaOyi54l-XUb5xLbqfKSNrmxjEBht?usp=sharing', '_blank')">
+      <img src="icons/paper.png">
+      <span>Resume</span>
+    </div>
+    
+    <div class="icon" ondblclick="openContactWindow()">
+      <img src="icons/phone.png">
+      <span>Contact</span>
+    </div>
 
-    <!-- bottom screen things -->
-    <div id="taskbar-placeholder"></div>
+  </div>
 
-    <script src="taskbar.js"></script>
+  <!-- pop ups -->
+  <div id="window-layer"></div>
+  <script src="startup.js"></script>
+  <script src="window.js"></script>
+  <script src="projects.js"></script>
+  <script src="contact.js"></script>
+  <script src="about.js"></script>
 
-    <!-- other html -->
-    <script>
-  fetch('taskbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('taskbar-placeholder').innerHTML = data;
-    });
-</script>
+  <!-- bottom screen things -->
+  <div id="taskbar-placeholder"></div>
 
-  </body>
+  <script src="taskbar.js"></script>
+
+  <!-- other html -->
+  <script>
+    fetch('taskbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('taskbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+
 </html>
