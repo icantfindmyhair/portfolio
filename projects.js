@@ -17,7 +17,7 @@ function openProjectsWindow() {
 }
 
 function openProjectWindow(projectName) {
-    openWindow(projectName, null, null, 600, 550).then(win => {
+    openWindow(projectName, null, null, 900, 550).then(win => {
       cleanedName = projectName.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
         fetch(`projects/${cleanedName}.html`)
           .then(res => res.text())
